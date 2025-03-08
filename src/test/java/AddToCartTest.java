@@ -9,7 +9,7 @@ public class AddToCartTest extends BaseTest {
     MainPage mainPage = new MainPage();
     ProductListPage productListPage = new ProductListPage();
 
-    @Test
+    @Test(description = "Sepete Urun Ekeleme")
     public void addToCartTest() {
         loginPage.fillEmail(email)
                 .fillPassword(password)

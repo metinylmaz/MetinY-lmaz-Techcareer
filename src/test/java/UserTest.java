@@ -11,7 +11,7 @@ public class UserTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
     MainPage mainPage = new MainPage();
 
-    @Test
+    @Test(description = "Basarili Kullanici Girisi")
     public void loginSuccesful() {
         loginPage.fillEmail(email)
                 .fillPassword(password)
@@ -21,7 +21,7 @@ public class UserTest extends BaseTest {
         Assert.assertEquals(mainPage.getAccount(), adsoyad);
     }
 
-    @Test
+    @Test(description = "Basarisiz Kullanici Girisi")
     public void loginUnSuccesful() throws InterruptedException {
         loginPage.fillEmail(email)
                 .fillPassword(hatalipassword)

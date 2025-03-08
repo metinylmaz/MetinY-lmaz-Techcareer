@@ -10,7 +10,7 @@ public class FavouriteTest extends BaseTest {
     LoginPage loginPage= new LoginPage();
     MainPage mainPage=new MainPage();
     ProductListPage productListPage=new ProductListPage();
-    @Test
+    @Test(description = "Favoriler Kontrol")
     public void favouriteTest(){
 
         loginPage.fillEmail(email)
@@ -19,6 +19,7 @@ public class FavouriteTest extends BaseTest {
         sleep(5000);
         mainPage.fillSearch("ASUS Kulaklık");
     productListPage.firstProductClick();
+    sleep(2000);
     productListPage.addFavouriteList();
 
 
